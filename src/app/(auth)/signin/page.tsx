@@ -12,12 +12,13 @@ export default function Page() {
     <div className="w-full font-sans flex-col min-h-screen flex items-center justify-center">
       <h1 className="text-2xl font-bold leading-tight">Sign In</h1>
       <p>You have to signed in</p>
-      <Link
+      <a
         href={"/api/auth/google"}
+        aria-label="Sign in with Google"
         className={buttonVariants({ variant: "secondary" })}
       >
         Sign In with Google
-      </Link>
+      </a>
       <SignInForm />
       <Link
         href={"/signup"}

@@ -10,14 +10,16 @@ export async function GET(): Promise<NextResponse> {
 
     cookies().set("google_oauth_state", state, {
       httpOnly: true,
-      secure: true,
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
+      maxAge: 60 * 10,
     });
 
     cookies().set("google_code_verifier", codeVerifier, {
       httpOnly: true,
-      secure: true,
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
+      maxAge: 60 * 10,
     });
 
     const url = await google.createAuthorizationURL(state, codeVerifier, {

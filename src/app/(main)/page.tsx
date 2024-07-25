@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Client from "./compoents/client";
+import { Button } from "@/components/ui/button";
 
 export default async function Home() {
   return (
@@ -23,6 +24,8 @@ export default async function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
+
+        <Button variant="secondary">Secondary</Button>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a

@@ -2,7 +2,6 @@ import OneTapComponent from "@/components/onetap";
 import { validateRequest } from "@/lib/lucia/auth";
 import Providers from "@/providers";
 import SessionProvider from "@/providers/auth";
-import { redirect } from "next/navigation";
 
 export default async function Layout({
   children,
